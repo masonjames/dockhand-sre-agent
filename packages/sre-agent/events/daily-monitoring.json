@@ -1,0 +1,6 @@
+{
+  "type": "periodic",
+  "text": "Check Prometheus alerts and down targets using check_alerts and monitoring_status. Analyze the results — if there are active alerts or down targets, diagnose the situation using prometheus_query and logs.view as needed, then send_notification with your findings and recommended actions. If everything is healthy, respond [SILENT].",
+  "schedule": "0 16 * * *",
+  "timezone": "UTC"
+}

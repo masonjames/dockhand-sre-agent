@@ -1,0 +1,50 @@
+{
+	"name": "@mariozechner/pi-sre-agent",
+	"version": "0.50.9",
+	"description": "Headless SRE agent that monitors infrastructure via the dockhand infra-agent portal API",
+	"type": "module",
+	"bin": {
+		"dockhand": "dist/main.js",
+		"sre-agent": "dist/main.js"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "tsgo -p tsconfig.build.json && chmod +x dist/main.js",
+		"dev": "tsgo -p tsconfig.build.json --watch --preserveWatchOutput",
+		"prepublishOnly": "npm run clean && npm run build"
+	},
+	"dependencies": {
+		"@mariozechner/pi-agent-core": "^0.50.9",
+		"@mariozechner/pi-ai": "^0.50.9",
+		"@mariozechner/pi-coding-agent": "^0.50.9",
+		"@sinclair/typebox": "^0.34.0",
+		"croner": "^9.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.3.0",
+		"typescript": "^5.7.3"
+	},
+	"keywords": [
+		"dockhand",
+		"sre",
+		"agent",
+		"infrastructure",
+		"monitoring"
+	],
+	"author": "Mason James",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/badlogic/pi-mono.git",
+		"directory": "packages/sre-agent"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}

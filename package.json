@@ -1,0 +1,29 @@
+{
+	"name": "dockhand-sre-agent",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"build": "cd packages/tui && npm run build && cd ../ai && npm run build && cd ../agent && npm run build && cd ../coding-agent && npm run build && cd ../sre-agent && npm run build",
+		"clean": "npm run clean --workspaces"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.5",
+		"@typescript/native-preview": "7.0.0-dev.20260120.1",
+		"tsx": "^4.20.3",
+		"typescript": "^5.9.2"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"version": "0.0.1",
+	"dependencies": {
+		"@mariozechner/jiti": "^2.6.5",
+		"get-east-asian-width": "^1.4.0"
+	},
+	"overrides": {
+		"fast-xml-parser": "5.3.4"
+	}
+}

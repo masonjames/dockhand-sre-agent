@@ -1,0 +1,6 @@
+{
+  "type": "periodic",
+  "text": "Scan for recently failed scheduled jobs using list_jobs with source=scheduler and status=failed. For each failure, review the error details. Attempt to diagnose root causes — check related service health, recent logs, or monitoring data. Send a notification summarizing any failures found with your diagnosis and recommended next steps. If no failures found, respond [SILENT].",
+  "schedule": "0 */6 * * *",
+  "timezone": "UTC"
+}

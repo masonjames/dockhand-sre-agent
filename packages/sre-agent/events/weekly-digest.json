@@ -1,0 +1,6 @@
+{
+  "type": "periodic",
+  "text": "Review the most recent digest.weekly job results using list_jobs with source=scheduler. Check the result summary and any errors. If the digest ran successfully, send_notification with a brief overview of the platform's weekly status. If it failed or hasn't run, note the issue and send_notification. If nothing notable, respond [SILENT].",
+  "schedule": "0 17 * * 1",
+  "timezone": "UTC"
+}

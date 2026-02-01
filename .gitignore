@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+*.tsbuildinfo
+packages/*/dist/
+
+# Environment
+.env
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Package specific
+.npm/
+coverage/
+.nyc_output/
